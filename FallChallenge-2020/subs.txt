@@ -1,0 +1,6 @@
+subsystems for teufelskind:
+ - Drivetrain
+ - Mast
+ - Manipulator
+ - Compressor
+ - Clamp
