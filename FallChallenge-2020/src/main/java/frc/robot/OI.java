@@ -8,6 +8,10 @@
 package frc.robot;
 
 import edu.wpi.first.wpilibj.Joystick;
+import edu.wpi.first.wpilibj.buttons.Button;
+import edu.wpi.first.wpilibj.buttons.JoystickButton;
+
+import frc.robot.util.Xbox;
 
 /**
  * The OI is where the two XBox controllers (or other controllers) are referenced, and some control is assigned.
@@ -15,12 +19,16 @@ import edu.wpi.first.wpilibj.Joystick;
  * Joystick control is defined in it's own command
  */
 public class OI {
+
+    // DO NOT CHANGE THESE! The manual subsystems depend on these controllers.
     public static Joystick DRIVER = new Joystick(0);
     public static Joystick OPERATOR = new Joystick(1);
 
     /**
-     * If there are any commands linked to buttons, link them in this constructor.
+     * If there are any commands linked to buttons, they are linked in this constructor.
+     * I've linked ButtonCommandToggleClamp to B as an example
      */
     public OI() {
+        Button toggleClamp = new JoystickButton(OPERATOR, Xbox.B); //clamp is toggled by pressing B on the operator controller
     }
 }

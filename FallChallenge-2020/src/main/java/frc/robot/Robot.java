@@ -10,14 +10,22 @@ package frc.robot;
 import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.command.Scheduler;
+import frc.robot.subsystems.SubsystemClamp;
+import frc.robot.subsystems.SubsystemCompressor;
 import frc.robot.subsystems.SubsystemDrive;
+import frc.robot.subsystems.SubsystemManipulator;
+import frc.robot.subsystems.SubsystemMast;
 
 /**
  * The main robot class. You really shouldn't have to modify anything in here if I did this right
  */
 public class Robot extends TimedRobot {
   //subsystems
-  public static SubsystemDrive SUB_DRIVE = new SubsystemDrive();
+  public static SubsystemDrive       SUB_DRIVE;
+  public static SubsystemMast        SUB_MAST;
+  public static SubsystemManipulator SUB_MANIP;
+  public static SubsystemCompressor  SUB_COMP;
+  public static SubsystemClamp       SUB_CLAMP;
 
   /**
    * Called when the robot code starts
@@ -25,11 +33,20 @@ public class Robot extends TimedRobot {
   @Override
   public void robotInit() {
     DriverStation.reportWarning("ROBOT INIT", false);
+    
+    //instantiate the subsystems
+    SUB_DRIVE = new SubsystemDrive();
+    SUB_MAST  = new SubsystemMast();
+    SUB_MANIP = new SubsystemManipulator();
+    SUB_COMP  = new SubsystemCompressor();
+    SUB_CLAMP = new SubsystemClamp();
+
+    DriverStation.reportWarning("INIT COMPLETE", false);
     DriverStation.reportWarning("GOOD LUCK, HAVE FUN", false);
   }
 
   /**
-   * Called periodically no matter the state of the robot(enabled, disabled, auto, test)
+   * Called periodically no matter the state of the robot(enabled, disabled, auto, teleop)
    */
   @Override
   public void robotPeriodic() {

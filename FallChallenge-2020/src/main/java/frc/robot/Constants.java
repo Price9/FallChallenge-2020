@@ -12,4 +12,26 @@ package frc.robot;
  * Motor IDs, Solenoid IDs, and default dashboard values are stored here.
  */
 public class Constants {
+    
+    //drivetrain motor IDs
+    public static int 
+        DRIVE_LEFT_MASTER_ID  = 0,
+        DRIVE_RIGHT_MASTER_ID = 0,
+        DRIVE_LEFT_SLAVE_ID   = 0,
+        DRIVE_RIGHT_SLAVE_ID  = 0;
+
+    //mast motor IDs
+    public static int 
+        MAST_RIGHT_PINION_ID = 0,
+        MAST_LEFT_PINION_ID  = 0,
+        MAST_SCREW_ID        = 0;  
+
+    //manipulator motor IDs
+    public static int 
+        MANIPULATOR_RIGHT_MOTOR_ID = 0,
+        MANIPULATOR_LEFT_MOTOR_ID  = 0;
+
+    //clamp solenoid ID
+    public static int 
+        CLAMP_SOLENOID_ID = 0;
 }

@@ -9,6 +9,7 @@ package frc.robot.subsystems;
 
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.command.Subsystem;
+import frc.robot.commands.ManualCommandDrive;
 
 /**
  * The Subsystem class for the drivetrain. All methods and objects required for driving the robot should be put 
@@ -19,6 +20,10 @@ public class SubsystemDrive extends Subsystem {
   // Put methods for controlling this subsystem
   // here. Call these from Commands.
 
+  public SubsystemDrive() {
+    
+  }
+
   @Override
   public void initDefaultCommand() {
     /**
@@ -27,19 +32,19 @@ public class SubsystemDrive extends Subsystem {
      * defined and paired to this substem below with the setDefaultCommand() method. So in order for ManualCommandDrive 
      * to run, it has to be paired to this subsystem below, otherwise the robot will never respond to controller input.
      * 
-     * Long story short, in order for your drivetrain to work, you need to set the default command for this 
-     * subsystem to a new ManualCommandDrive.
+     * This ones for free broskis, y'all have to do the rest
      */
 
     // Set the default command for a subsystem here.
-    // setDefaultCommand(new MySpecialCommand());
+    setDefaultCommand(new ManualCommandDrive());
   }
 
   /**
    * Drives the robot based on controller input
+   * Right trigger is forward, left trigger is backward, left joystick steers.
    * @param controller the XBox controller to pull input from (OI.DRIVER or OI.OPERATOR)
    */
-  public void DriveTankByJoystick(Joystick controller) {
+  public void DriveTankByController(Joystick controller) {
     
   }
 }
