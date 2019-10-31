@@ -15,8 +15,6 @@ import edu.wpi.first.wpilibj.command.Command;
  */
 public class ManualCommandMoveMast extends Command {
   public ManualCommandMoveMast() {
-    // Use requires() here to declare subsystem dependencies
-    // eg. requires(chassis);
   }
 
   // Called just before this Command runs the first time
@@ -27,6 +25,7 @@ public class ManualCommandMoveMast extends Command {
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
+    //NOTE: mast is controlled by the OPERATOR, not the DRIVER!
   }
 
   // Make this return true when this Command no longer needs to run execute()

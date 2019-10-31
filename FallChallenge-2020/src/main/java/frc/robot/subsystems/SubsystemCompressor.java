@@ -17,12 +17,9 @@ public class SubsystemCompressor extends Subsystem {
   // here. Call these from Commands.
 
   public SubsystemCompressor() {
-    
   }
 
   @Override
   public void initDefaultCommand() {
-    // Set the default command for a subsystem here.
-    // setDefaultCommand(new MySpecialCommand());
   }
 }

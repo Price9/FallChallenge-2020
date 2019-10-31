@@ -10,7 +10,9 @@ package frc.robot;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
-
+import frc.robot.commands.ButtonCommandEat;
+import frc.robot.commands.ButtonCommandSpit;
+import frc.robot.commands.ButtonCommandToggleClamp;
 import frc.robot.util.Xbox;
 
 /**
@@ -29,6 +31,13 @@ public class OI {
      * I've linked ButtonCommandToggleClamp to B as an example
      */
     public OI() {
-        Button toggleClamp = new JoystickButton(OPERATOR, Xbox.B); //clamp is toggled by pressing B on the operator controller
+        Button toggleClamp = new JoystickButton(OPERATOR, Xbox.Y); //clamp is toggled by pressing on the operator controller
+            toggleClamp.toggleWhenPressed(new ButtonCommandToggleClamp()); //links the command
+
+        Button eat = new JoystickButton(OPERATOR, Xbox.A);
+            eat.whileHeld(new ButtonCommandEat());
+
+        Button spit = new JoystickButton(OPERATOR, Xbox.B);
+            spit.whileHeld(new ButtonCommandSpit());
     }
 }

@@ -21,7 +21,6 @@ public class SubsystemDrive extends Subsystem {
   // here. Call these from Commands.
 
   public SubsystemDrive() {
-    
   }
 
   @Override
@@ -45,6 +44,5 @@ public class SubsystemDrive extends Subsystem {
    * @param controller the XBox controller to pull input from (OI.DRIVER or OI.OPERATOR)
    */
   public void DriveTankByController(Joystick controller) {
-    
   }
 }

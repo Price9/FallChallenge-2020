@@ -9,6 +9,7 @@ package frc.robot.subsystems;
 
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.command.Subsystem;
+import frc.robot.commands.ManualCommandMoveMast;
 
 /**
  * The mast, which includes the rack-n-pinion AND the screw.
@@ -21,13 +22,15 @@ public class SubsystemMast extends Subsystem {
   // here. Call these from Commands.
 
   public SubsystemMast() {
-    
   }
 
   @Override
   public void initDefaultCommand() {
     // Set the default command for a subsystem here.
-    // setDefaultCommand(new MySpecialCommand());
+    setDefaultCommand(new ManualCommandMoveMast());
+  }
+
+  public void SetInverts(boolean rightInvert, boolean leftInvert, boolean screwInvert) {
   }
 
   /**
@@ -38,6 +41,5 @@ public class SubsystemMast extends Subsystem {
    * @param joy The controller that controls mast movement.
    */
   public void DriveByController(Joystick controller) {
-
   }
 }

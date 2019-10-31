@@ -17,19 +17,24 @@ public class SubsystemClamp extends Subsystem {
   // here. Call these from Commands.
 
   public SubsystemClamp() {
-
   }
 
   @Override
   public void initDefaultCommand() {
-    // Set the default command for a subsystem here.
-    // setDefaultCommand(new MySpecialCommand());
   }
 
+  /**
+   * Sets the clamps state based on the passed boolean.
+   * @param open should be true if the clamp should be open, false otherwise
+   */
   public void setOpen(boolean open) {
-
+    
   }
 
+  /**
+   * Gets the state of the clamp
+   * @return true if the clamp is open, false otherwise.
+   */
   public boolean getOpen() {
     return false;
   }

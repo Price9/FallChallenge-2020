@@ -14,8 +14,6 @@ import edu.wpi.first.wpilibj.command.Command;
  */
 public class ButtonCommandEat extends Command {
   public ButtonCommandEat() {
-    // Use requires() here to declare subsystem dependencies
-    // eg. requires(chassis);
   }
 
   // Called just before this Command runs the first time

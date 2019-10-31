@@ -15,28 +15,26 @@ import edu.wpi.first.wpilibj.command.Subsystem;
 public class SubsystemManipulator extends Subsystem {
   // Put methods for controlling this subsystem
   // here. Call these from Commands.
-
+  
   public SubsystemManipulator() {
-    
   }
 
   @Override
   public void initDefaultCommand() {
-    // Set the default command for a subsystem here.
-    // setDefaultCommand(new MySpecialCommand());
   }
 
   /**
    * Sucks the cubes in. This should happen when A is pressed.
    */
   public void eat() {
-
   }
 
   /**
    * Pushes the cubes out. This should happen when Y is pressed.
    */
   public void spit() {
+  }
 
+  public void stopMotors() {
   }
 }

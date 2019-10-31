@@ -22,7 +22,7 @@ public class ManualCommandDrive extends Command {
      * Any subsystems that the command will ever reference need to be declared here using requires().
      * Since the only subsystem I use here is the drivetrain, that is the only one I requre.
      * 
-     * This one's free, you have to do requres() yourself for the rest of the commands lol
+     * This one's free, you have to do requres() yourself for the rest of the commands
      */
 
     requires(Robot.SUB_DRIVE);
@@ -45,6 +45,7 @@ public class ManualCommandDrive extends Command {
      * After the command starts, this method is called periodically until the isFinished() method returns true. 
      * Since this command exists simply to drive the robot manually, what do y'all think you should put here?
      */
+
   }
 
   // Make this return true when this Command no longer needs to run execute()
@@ -64,7 +65,7 @@ public class ManualCommandDrive extends Command {
   @Override
   protected void end() {
     /**
-     * It's like initalize() except its flipped. Again, used mainly for the more complex commands
+     * It's like initalize() except its flipped, so it happens when the command 
      */
   }
 
@@ -73,8 +74,9 @@ public class ManualCommandDrive extends Command {
   @Override
   protected void interrupted() {
     /**
-     * Never used this one before, can't tell you exactly how it works.
-     * (bruh moment)
+     * This method is called when the command is force-stopped (isFinished() didn't return true, but the robot ended the command anyway)
+     * For example, if a command is linked to a button with a whileHeld().
+     * The command executes constantly when the button is pressed, and when the button is released, the linked command is interrupted.
      */
   }
 }

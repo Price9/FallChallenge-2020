@@ -14,24 +14,35 @@ package frc.robot;
 public class Constants {
     
     //drivetrain motor IDs
-    public static int 
-        DRIVE_LEFT_MASTER_ID  = 0,
-        DRIVE_RIGHT_MASTER_ID = 0,
-        DRIVE_LEFT_SLAVE_ID   = 0,
-        DRIVE_RIGHT_SLAVE_ID  = 0;
+    public static final int 
+        DRIVE_LEFT_MASTER_ID  = 1,
+        DRIVE_RIGHT_MASTER_ID = 3,
+        DRIVE_LEFT_SLAVE_ID   = 2,
+        DRIVE_RIGHT_SLAVE_ID  = 4;
 
     //mast motor IDs
-    public static int 
-        MAST_RIGHT_PINION_ID = 0,
-        MAST_LEFT_PINION_ID  = 0,
-        MAST_SCREW_ID        = 0;  
+    public static final int 
+        MAST_RIGHT_PINION_ID = 5,
+        MAST_LEFT_PINION_ID  = 6,
+        MAST_SCREW_ID        = 7;
 
     //manipulator motor IDs
-    public static int 
-        MANIPULATOR_RIGHT_MOTOR_ID = 0,
-        MANIPULATOR_LEFT_MOTOR_ID  = 0;
+    public static final int 
+        MANIPULATOR_RIGHT_MOTOR_ID = 8,
+        MANIPULATOR_LEFT_MOTOR_ID  = 9;
 
     //clamp solenoid ID
-    public static int 
-        CLAMP_SOLENOID_ID = 0;
+    public static final int 
+        CLAMP_SOLENOID_ID = 6;
+
+    //mast limit IDs but don't actually worry about limit switches for now I still have to test those
+    public static final int
+        MAST_OUTER_LIMIT_ID = 0,
+        MAST_INNER_LIMIT_ID = 0;
+
+    //mast motor inverts
+    public static final boolean
+        MAST_RIGHT_INVERT = false,
+        MAST_LEFT_INVERT = true,
+        MAST_SCREW_INVERT = false;
 }

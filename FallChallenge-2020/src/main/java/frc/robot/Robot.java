@@ -26,6 +26,7 @@ public class Robot extends TimedRobot {
   public static SubsystemManipulator SUB_MANIP;
   public static SubsystemCompressor  SUB_COMP;
   public static SubsystemClamp       SUB_CLAMP;
+  public static OI                   OI;
 
   /**
    * Called when the robot code starts
@@ -40,6 +41,7 @@ public class Robot extends TimedRobot {
     SUB_MANIP = new SubsystemManipulator();
     SUB_COMP  = new SubsystemCompressor();
     SUB_CLAMP = new SubsystemClamp();
+    OI        = new OI();
 
     DriverStation.reportWarning("INIT COMPLETE", false);
     DriverStation.reportWarning("GOOD LUCK, HAVE FUN", false);
@@ -74,6 +76,15 @@ public class Robot extends TimedRobot {
   @Override
   public void teleopPeriodic() {
     Scheduler.getInstance().run();
+  }
+
+  @Override
+  public void disabledInit() {
+    DriverStation.reportWarning("DISABLED", false);
+  }
+
+  @Override
+  public void disabledPeriodic() {
   }
 
   /**
