@@ -45,4 +45,9 @@ public class Constants {
         MAST_RIGHT_INVERT = false,
         MAST_LEFT_INVERT = true,
         MAST_SCREW_INVERT = false;
-}
+    public static final  boolean
+        DRIVE_LEFT_MASTER_INVERT = false,
+        DRIVE_LEFT_SLAVE_INVERT = false,
+        DRIVE_RIGHT_SLAVE_INVERT = true,
+        DRIVE_RIGHT_MASTER_INVERT = true; 
+    }

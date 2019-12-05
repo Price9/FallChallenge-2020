@@ -8,6 +8,7 @@
 package frc.robot.commands;
 
 import edu.wpi.first.wpilibj.command.Command;
+import frc.robot.OI;
 import frc.robot.Robot;
 
 /**
@@ -45,7 +46,7 @@ public class ManualCommandDrive extends Command {
      * After the command starts, this method is called periodically until the isFinished() method returns true. 
      * Since this command exists simply to drive the robot manually, what do y'all think you should put here?
      */
-
+    Robot.SUB_DRIVE.DriveTankByController(OI.DRIVER);
   }
 
   // Make this return true when this Command no longer needs to run execute()
